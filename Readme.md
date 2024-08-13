@@ -9,3 +9,8 @@ json의 scripts에 test:typescript:"tsc"추가  ->`npm run test:typescript`실�
 ## 아이콘 설치
 
 ` npm install @expo/vector-icons `<br>
+
+## TypeScript변환 
+
+children들은 reactElement로 받아준다.
+TypoGraphy를 import 하기위해 count의 유무를 판별하여 prop으로 받아준다.

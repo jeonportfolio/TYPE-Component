@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { View } from "react-native";
 import { Typography } from "./Typography";
 
@@ -28,7 +28,10 @@ import { Typography } from "./Typography";
 //     } 
 // }
 
-export const Badge = (props) => {
+export const Badge:React.FC<{
+    children:ReactElement;
+    count?:number;
+}> = (props) => {
     return(
         <View>
             {props.children}
@@ -46,7 +49,12 @@ export const Badge = (props) => {
             }
             
             ]}>
-                <Typography fontSize={10} color='white'/>
+                {props.count && (
+                    <Typography fontSize={10} color='white'>
+                        {props.count.toString()}
+                    </Typography>
+                )}
+                
             </View>
         </View>
     )
